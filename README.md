@@ -11,6 +11,10 @@ This C# program includes a method that takes an integer array and returns the nu
 This C# program includes a function named ArrayReversal that accepts an array as its parameter and returns a new array with the elements in reverse order. The function achieves this without using any built-in methods provided by the C# language.
 ![Most Frequent Number Whiteboard](./whiteboard-challenges/Most-FrequentNumber.png)
 
+
+
+
+# Challenge 02: Maximum Value
 ### Challenge 02: Maximum Value
 ### Description 
 Write a function called MaximumValue that accepts an array of integers as its parameter.Without utilizing any of the built-in methods provided by the language, the function should return the maximum value in the array.![Most Frequent Number Whiteboard](./whiteboard-challenges/Most-FrequentNumber.png)
