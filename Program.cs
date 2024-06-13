@@ -1,4 +1,6 @@
-﻿
+﻿using System;
+using System.Collections.Generic;
+
 namespace challenges_and_data_structures
 {
     internal class Program
@@ -7,7 +9,7 @@ namespace challenges_and_data_structures
         {
             // Problem 1
             int[] array = { 1, 2, 3, 4, 5 };
-            Console.WriteLine("Orginal arry:");
+            Console.WriteLine("Original array:");
             PrintArray(array);
 
             int[] reversedArray = ArrayReversal(array);
@@ -29,9 +31,9 @@ namespace challenges_and_data_structures
             int[] arr1 = { 10, 15, 8, 6, 12 };
             int[] arr2 = { 1, 3, 5, 7, 9 };
             int[] arr3 = { 7, 9, 13, 25, 5 };
-            Console.WriteLine("The arr1 contains : 10, 15, 8, 6, 12");
-            Console.WriteLine("The arr2 contains : 1, 3, 5, 7, 9");
-            Console.WriteLine("The arr3 contains : 7, 9, 13, 25, 5");
+            Console.WriteLine("The arr1 contains: 10, 15, 8, 6, 12");
+            Console.WriteLine("The arr2 contains: 1, 3, 5, 7, 9");
+            Console.WriteLine("The arr3 contains: 7, 9, 13, 25, 5");
 
 
             int max1 = MaximumValue(arr1);
@@ -42,11 +44,39 @@ namespace challenges_and_data_structures
             Console.WriteLine("Maximum value in arr2: " + max2);
             Console.WriteLine("Maximum value in arr3: " + max3);
 
+
+            // Problem 4
+            int[] arr4 = { 7, 9, 13, 25, 5, 17};
+            Console.WriteLine("Original array:");
+            PrintArray(arr4);
+
+            int[] modifiedArray = RemoveMiddleValue(arr4);
+            Console.WriteLine("Modified array:");
+            PrintArray(modifiedArray);
+        }
+
+        static int[] RemoveMiddleValue(int[] arr)
+        {
+            int[] newArr = new int[arr.Length - 1];
+            int middle = arr.Length / 2;
+
+            for(int i = 0; i < arr.Length; i++)
+            {
+                if(i == middle)
+                {
+                    continue;
+                }
+                else
+                {
+                    newArr[i > middle ? i - 1 : i] = arr[i];
+                }
+            }
+
+            return newArr;
         }
 
         static int MostFrequentNumber(int[] arr)
         {
-
             Dictionary<int, int> frequencyCount = new Dictionary<int, int>();
 
             foreach(int num in arr)
@@ -72,7 +102,6 @@ namespace challenges_and_data_structures
             return mostFrequentNumber;
         }
 
-
         static int[] ArrayReversal(int[] arr)
         {
             int[] reversedArray = new int[arr.Length];
@@ -87,6 +116,7 @@ namespace challenges_and_data_structures
                 start++;
                 end--;
             }
+
             return reversedArray;
         }
 
@@ -94,10 +124,11 @@ namespace challenges_and_data_structures
         {
             foreach(int num in arr)
             {
-                Console.WriteLine(num + " ");
+                Console.Write(num + " ");
             }
             Console.WriteLine();
         }
+
         static int MaximumValue(int[] arr)
         {
             int maxVal = int.MinValue; // Initialize maxVal to the minimum possible value of an integer
@@ -112,9 +143,5 @@ namespace challenges_and_data_structures
 
             return maxVal;
         }
-
-
-
-
     }
 }
