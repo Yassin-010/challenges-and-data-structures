@@ -25,3 +25,11 @@ Write a function called MaximumValue that accepts an array of integers as its pa
 Given an array of integers, remove the middle element(s) from the array and return the modified array. If the array has an odd length, remove the middle element. If the array has an even length, remove the two middle elements.
 ![Remove Middle Value from Array](./whiteboard-challenges/Remove-Middle-Value-from-Array.png).
 
+
+### Challenge 04: Insert Value in Middle of Array.
+### Description:
+Write a function called MiddleValue which takes in an array and a value to be added. Without utilizing any of the built-in methods available to your language, return an array with the new value added at the middle index.
+![Insert Value in Middle of Array](./whiteboard-challenges/nsert-Value-in-Middle-of-Array.png).
+
+
+
