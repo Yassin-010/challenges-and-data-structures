@@ -46,13 +46,21 @@ namespace challenges_and_data_structures
 
 
             // Problem 4
-            int[] arr4 = { 7, 9, 13, 25, 5, 17};
+            int[] arr4 = { 7, 9, 13, 25, 5, 17 };
             Console.WriteLine("Original array:");
             PrintArray(arr4);
 
             int[] modifiedArray = RemoveMiddleValue(arr4);
             Console.WriteLine("Modified array:");
             PrintArray(modifiedArray);
+
+
+            // Problem 5
+            int[] arr5 = { 1, 2, 3, 4 };
+            int value5 = 5;
+            int[] result5 = MiddleValue(arr5, value5);
+            Console.WriteLine("Input: [{0}], {1}", string.Join(", ", arr5), value5);
+            Console.WriteLine("Output: [{0}]", string.Join(", ", result5));
         }
 
         static int[] RemoveMiddleValue(int[] arr)
@@ -142,6 +150,24 @@ namespace challenges_and_data_structures
             }
 
             return maxVal;
+        }
+
+        static int[] MiddleValue(int[] array, int value)
+        {
+            int middleIndex = array.Length / 2;
+            int[] newArray = new int[array.Length + 1];
+
+            for(int i = 0; i < newArray.Length; i++)
+            {
+                if(i < middleIndex)
+                    newArray[i] = array[i];
+                else if(i == middleIndex)
+                    newArray[i] = value;
+                else
+                    newArray[i] = array[i - 1];
+            }
+
+            return newArray;
         }
     }
 }
