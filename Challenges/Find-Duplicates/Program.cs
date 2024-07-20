@@ -28,6 +28,7 @@ namespace challenges_and_data_structures
 
         public static int[] FindDuplicates(int[] arr)
 
+
         {
             List<int> duplicates = new List<int>();
             Dictionary<int, int> countMap = new Dictionary<int, int>();
@@ -39,6 +40,7 @@ namespace challenges_and_data_structures
                 else
                     countMap[num] = 1;
             }
+
 
             foreach(KeyValuePair<int, int> entry in countMap)
             {
