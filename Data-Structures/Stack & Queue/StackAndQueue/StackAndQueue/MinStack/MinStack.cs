@@ -8,6 +8,7 @@ namespace StackAndQueue
         private Stack<int> stack;
         private Stack<int> minStack;
 
+
         public MinStack()
         {
             stack = new Stack<int>();
