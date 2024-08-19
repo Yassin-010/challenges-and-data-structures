@@ -9,11 +9,11 @@ namespace StackAndQueue
 
         public Queue()
         {
+
             front = tail = null;
         }
 
-        public void Enqueue(int data)
-        {
+        public void Enqueue(int data){
             Node newNode = new Node(data);
             if (tail == null)
             {
