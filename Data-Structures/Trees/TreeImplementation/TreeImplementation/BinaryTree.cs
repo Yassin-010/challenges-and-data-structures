@@ -10,6 +10,8 @@ namespace TreeImplementation
     {
         public Node Root { get; set; }
 
+
+
         public BinaryTree()
         {
             Root = null;
