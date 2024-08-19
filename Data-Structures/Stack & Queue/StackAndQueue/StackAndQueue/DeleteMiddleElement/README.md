@@ -6,4 +6,5 @@ Implement a method to delete the middle element of a stack in C#. If the stack h
 
 ## Whiteboard Image
 
+
 ![Stack Challenge: Delete Middle Element of a Stack](./cc10.png)
