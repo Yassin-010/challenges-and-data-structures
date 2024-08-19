@@ -9,6 +9,8 @@ namespace challenges_and_data_structures
         {
             int[] input1 = { 1, 2, 3, 1, 2, 3 };
             int[] duplicates1 = FindDuplicates(input1);
+
+
             Console.WriteLine("Input: [1, 2, 3, 1, 2, 3]");
             Console.WriteLine("Output: [" + string.Join(", ", duplicates1) + "]");
             Console.WriteLine();
