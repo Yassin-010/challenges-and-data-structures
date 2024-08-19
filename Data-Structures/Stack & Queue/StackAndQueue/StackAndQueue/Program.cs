@@ -10,6 +10,8 @@ namespace StackAndQueue
             //========= [ Stack example ] =========
             Console.WriteLine("========= [ Stack example ] =========");
 
+      
+
             Stack stack = new Stack();
             stack.Push(10);
             stack.Push(5);
